@@ -13,6 +13,7 @@ import HorizontalCards from "./partials/HorizontalCards";
 import Loading from "./Loading";
 
 const TvDetails = () => {
+    document.title = "SCSDB | Tv Show Details";
     const { pathname } = useLocation();
     const navigate = useNavigate();
     const { id } = useParams();

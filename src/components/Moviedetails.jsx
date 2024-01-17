@@ -12,6 +12,8 @@ import HorizontalCards from "./partials/HorizontalCards";
 import Loading from "./Loading";
 
 const Moviedetails = () => {
+    document.title = "SCSDB | Movie Details";
+
     const { pathname } = useLocation();
     const navigate = useNavigate();
     const { id } = useParams();
