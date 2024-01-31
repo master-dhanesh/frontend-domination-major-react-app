@@ -5,6 +5,17 @@ import noimage from "/noimage.jpeg";
 const Cards = ({ data, title }) => {
     return (
         <div className="flex flex-wrap w-full h-full px-[5%] bg-[#1F1E24]">
+            <Link
+                onClick={() => {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth",
+                    });
+                }}
+                className="fixed bottom-[5%] right-[5%] flex justify-center items-center w-[5vh] h-[5vh] bg-[#6556cd] rounded-lg"
+            >
+                <i className="text-white ri-arrow-up-line text-xl"></i>
+            </Link>
             {data.map((c, i) => (
                 <Link
                     to={`/${c.media_type || title}/details/${c.id}`}
