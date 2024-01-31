@@ -2,13 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import noimage from "/noimage.jpeg";
 
-const HorizontalCards = ({ data }) => {
+const HorizontalCards = ({ data, title }) => {
     return (
         <div className="w-[100%] flex  overflow-y-hidden mb-5 p-5 ">
             {data.length > 0 ? (
                 data.map((d, i) => (
                     <Link
-                        to={`/${d.media_type}/details/${d.id}`}
+                        to={`/${d.media_type || title}/details/${d.id}`}
                         key={i}
                         className="min-w-[15%] h-[35vh]  bg-zinc-900 mr-5 mb-5"
                     >

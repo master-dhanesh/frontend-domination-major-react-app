@@ -9,8 +9,7 @@ const Trailer = () => {
     const { pathname } = useLocation();
     const category = pathname.includes("movie") ? "movie" : "tv";
     const ytvideo = useSelector((state) => state[category].info.videos);
-    document.title = "SCSDB | " + ytvideo.name;
-
+    ytvideo && ytvideo.name && (document.title = "SCSDB | " + ytvideo.name);
     return (
         <div className="bg-[rgba(0,0,0,.9)] absolute z-[100] top-0 left-0 w-screen h-screen flex items-center justify-center">
             <Link

@@ -170,6 +170,7 @@ const Moviedetails = () => {
                 Recommendations & Similar stuff
             </h1>
             <HorizontalCards
+                title="movie"
                 data={
                     info.recommendations.length > 0
                         ? info.recommendations
